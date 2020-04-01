@@ -1,0 +1,169 @@
+html body #nav {
+  background-color: white; }
+  html body #nav h3 {
+    background: linear-gradient(to right, #00b300, #00eb00);
+    color: white;
+    font-size: 18px;
+    padding: 5px;
+    text-align: center; }
+  html body #nav img {
+    display: block;
+    height: 100px;
+    margin: 10px; }
+  html body #nav h4 {
+    color: grey;
+    padding: 10px;
+    font-size: 18px; }
+    html body #nav h4 span {
+      font-size: 24px;
+      color: #00eb00; }
+  html body #nav a:first-of-type {
+    background-color: white;
+    box-shadow: none;
+    border-radius: 0px;
+    color: #00eb00;
+    margin: 5px 0 30px 10px;
+    padding: 2px;
+    text-align: left;
+    text-decoration: underline; }
+  html body #nav #option-section {
+    background-color: white;
+    border: 1px dashed grey;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px -1px 5px grey;
+    height: 100%;
+    margin: 5px;
+    padding: 2px; }
+    html body #nav #option-section a {
+      background-color: #00b300;
+      border-radius: 20px;
+      box-shadow: 0px 0px 1px grey;
+      color: white;
+      display: block;
+      font-size: 18px;
+      height: auto;
+      margin: 10px;
+      padding: 15px 20px 15px 20px;
+      text-align: center;
+      text-decoration: none;
+      width: 90%; }
+    html body #nav #option-section a:hover {
+      background-color: #00eb00;
+      color: white;
+      text-decoration: none; }
+  html body #nav a:first-of-type:hover {
+    background-color: #00eb00;
+    border-radius: 5px;
+    color: white; }
+  html body #nav hr {
+    color: #009400;
+    padding: 0px;
+    margin: 0px; }
+  html body #nav div {
+    display: block;
+    background-color: white; }
+    html body #nav div p {
+      text-align: center;
+      color: grey;
+      font-size: 20px;
+      margin: 0px; }
+    html body #nav div input {
+      background-color: #f2f2f2;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px 0px 3px grey;
+      height: 40px;
+      margin: 7px 0 0 10px;
+      padding-left: 20px;
+      width: 90%; }
+    html body #nav div button {
+      background: #00eb00;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px 0px 3px grey;
+      color: white;
+      height: 40px;
+      margin: 7px 0 0 10px;
+      width: 70px; }
+    html body #nav div footer {
+      background-color: #009400;
+      box-sizing: border-box;
+      bottom: 0px;
+      border-radius: 5px;
+      color: white;
+      font-size: 15px;
+      padding: 10px;
+      position: absolute;
+      text-align: left;
+      width: 94%; }
+html body #body {
+  background-color: #f2f2f2;
+  float: right;
+  height: 100%;
+  width: 80%; }
+  html body #body ul {
+    display: inline-block;
+    padding: 10px;
+    width: 50%; }
+  html body #body #messages {
+    background-color: white;
+    box-shadow: 0px 0px 6px grey;
+    float: right;
+    height: 100%;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 35%;
+    z-index: 1; }
+    html body #body #messages #message-title {
+      color: #00b300;
+      font-size: 30px;
+      height: auto;
+      outline: 1px solid lightgrey;
+      padding: 10px;
+      width: 100%; }
+    html body #body #messages #message-body {
+      position: relative;
+      height: 100%;
+      width: 100%; }
+      html body #body #messages #message-body #message-list {
+        height: 80%;
+        list-style: none;
+        margin: 10px;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        width: 100%; }
+      html body #body #messages #message-body textarea {
+        background-color: #f2f2f2;
+        bottom: 70px;
+        border: none;
+        border-radius: 30px 0px 0px 30px;
+        box-shadow: 0px 0px 3px grey;
+        height: 40px;
+        left: 20px;
+        max-height: 40px;
+        min-height: 40px;
+        padding-left: 20px;
+        position: absolute;
+        width: 300px; }
+      html body #body #messages #message-body button {
+        background: #00eb00;
+        bottom: 70px;
+        border: none;
+        border-radius: 0px 30px 30px 0px;
+        box-shadow: 0px 0px 3px grey;
+        color: white;
+        height: 40px;
+        left: 320px;
+        position: absolute; }
+    html body #body #messages #info {
+      color: #00b300;
+      font-size: 30px;
+      margin-top: 200px;
+      text-align: center; }
+      html body #body #messages #info span {
+        color: grey;
+        display: block;
+        font-size: 25px; }
+
+/*# sourceMappingURL=homestyle.css.map */

@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+{% block nav %}
+  <h3>chatpad</h3>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRjsyhqLSnIMdOuWIFA18YjmKnMdRJlpPuJjPUwZX1W_sfcGzmL" alt="avatar">
+  <h4>username:  <span data-user="{{user}}">{{user}}</span></h4>
+  <a href="{{url_for('logout')}}">logout</a>
+  <hr>
+
+  <div id="option-section">
+    <a id="create_channel">create channel</a>
+    <div id="channelform">
+      <p>Channel name:</p>
+      <input id="channel-name" type="text" name="channel" placeholder="channel name" required>
+      <button id="submit">use</button>
+    </div>
+    <div id="channel-alert" class="alert alert-info" role="alert" style="margin: 1%; width: 96%; display:none;">name already taken</div>
+    <footer>
+      <span>&copy Kiragu</span>
+      <span style="clear:both;">phone: +254708807844</span>
+      <span>email: samuelkiragu107@gmail.com</span>
+    </footer>
+  </div>
+
+{% endblock %}
+
+{% block body %}
+
+  <div id="delete-notification" style="
+  background: white;
+  box-shadow: 0px 0px 3px #e5e5e5;
+  border-radius: 4px;
+  color: grey;
+  display: none;
+  font-size: 20px;
+  position:absolute;
+  height: auto;
+  margin: 5px;
+  width: 200px;
+  padding: 10px;
+  z-index: 2;
+  ">
+    <span style="display: block;">delete message?</span>
+    <button style="
+    background-color:white;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px grey;
+    color: green;
+    margin: 5px;
+    padding: 2px;
+    width: 60px;
+    " id="yes">yes</button>
+    <button style="
+    background-color:white;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px grey;
+    color: red;
+    margin: 5px;
+    padding: 2px;
+    width: 60px;
+    " id="no">no</button>
+  </div>
+
+  <ul id="channel-list">
+    {% for channel in channels %}
+    <li style="background-color: white; border-radius: 5px; box-shadow: 0px 0px 5px grey; height:90px; list-style: none; margin: 10px; position: relative; padding: 10px; width: 100%;">
+      <img src="https://cdn4.vectorstock.com/i/1000x1000/00/73/people-group-avatar-character-vector-12390073.jpg" style="border-right: 1px solid grey;"height="100%">
+      <h4 style="color: #00b300; left: 100px; position: absolute; top: 5px;">
+        {{ channel.name }}
+      </h4>
+      <h5 style="color: grey; font-size:15px; position:absolute; bottom: 20px; left:100px; font-style: italic;">
+        <span style="color: black; font-style: normal;">Created on: </span>{{ channel.datecreated}}<span style="color: black; font-style: normal;"> at </span>{{ channel.timecreated }}
+      </h5>
+      <button class="joinbtn" style="background-color: #00eb00; border: none; border-radius: 2px; color: white; height: 35px; width: 70px; position:absolute; bottom: 5px; right: 10px;" data-channel="{{channel.name}}">join</button>
+    </li>
+    {% endfor %}
+  </ul>
+  <div id="messages">
+    <div id="message-title"></div>
+    <div id="message-body">
+      <ul id="message-list">
+
+      </ul>
+      <textarea id="messageText" name="name" placeholder="write your message"></textarea>
+      <button id="post-message">send</button>
+    </div>
+    <div id="info">SELECT A CHANNEL :)<span>for you to view the messages</span></div>
+  </div>
+{% endblock %}

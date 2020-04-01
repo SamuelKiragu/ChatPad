@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/styles/indexstyle.css">
+    <link rel="stylesheet" href="/static/styles/homestyle.css">
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script id="result" type="text/x-handlebars-template" src="static/script/channeltemplate.js">
+      <li style="background-color: white; border-radius: 5px; box-shadow: 0px 0px 5px grey; height:90px; list-style: none; margin: 10px; position: relative; padding: 10px; width: 100%;">
+        <img src="https://cdn4.vectorstock.com/i/1000x1000/00/73/people-group-avatar-character-vector-12390073.jpg" style="border-right: 1px solid grey;"height="100%">
+        <h4 style="color: #00b300; left: 100px; position: absolute; top: 5px;">
+          {% raw -%}{{ channel_name }}{%- endraw %}
+        </h4>
+        <h5 style="color: grey; font-size:15px; position:absolute; bottom: 20px; left:100px; font-style: italic;">
+          <span style="color: black; font-style: normal;">Created on: </span>{% raw -%}{{ date }}{%- endraw %}<span style="color: black; font-style: normal;"> at </span>{% raw -%}{{ time }}{%- endraw %}
+        </h5>
+        <button class="joinbtn" style="background-color: #00eb00; border: none; border-radius: 2px; color: white; height: 35px; width: 70px; position:absolute; bottom: 5px; right: 10px;" data-channel="{% raw -%}{{channel_name}}{%- endraw %}">join</button>
+      </li>
+    </script>
+    <script id="message" type="text/x-handlebars-template">
+      <li class="actual-messages" style="
+        border: 1px solid white;
+        border-radius: 17px 30px 30px 0px;
+        box-shadow: 1px 1px 6px #e3e3e3;
+        margin: 10px;
+        padding: 10px;
+        width: min-content;" data-text="{% raw -%}{{ message }}{%- endraw %}" data-time="{% raw -%}{{ time }}{%- endraw %}">
+        <div style="
+        width: min-content;
+        ">
+          <div style="
+          color:green;
+          text-decoration: underline;">{% raw -%}{{ writer }}{%- endraw %}</div>
+          <div style="
+          background: #f4f4f4;
+          height:auto;
+          min-height:30px;
+          max-width: 250px;
+          min-width: 100px;
+          width: min-content;
+          word-wrap: break-word;">{% raw -%}{{ message }}{%- endraw %}</div>
+        </div>
+        <div style="
+        color: grey;
+        font-size: 15px;
+        " >{% raw -%}{{ time }}{%- endraw %}</div>
+      </li>
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+    <script type="text/javascript" src="/static/script/indexscript.js"></script>
+    <title>home</title>
+  </head>
+  <body>
+    <div id="nav">
+      {% block nav %}
+      {% endblock %}
+    </div>
+    <div id="body">
+        {% block body %}
+        {% endblock %}
+    </div>
+
+  </body>
+</html>

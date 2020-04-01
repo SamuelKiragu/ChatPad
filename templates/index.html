@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/styles/indexstyle.css">
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded',function(){
+        localStorage.removeItem('channelname');
+        document.querySelector('#submit').onclick = ()=>{
+          localStorage.setItem('user',`${document.querySelector('#user').value}`);
+        };
+      });
+    </script>
+    <title>chatpad</title>
+  </head>
+  <body>
+    <div id="body">
+      <div id="display-container">
+        <form class="" action="{{url_for('index')}}" method="post">
+          <label for="display-name">Display name:</label>
+          <input id="user" type="text" name="user" value="" placeholder="display name" required>
+          <input id="submit" type="submit" name="submit" value="use">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

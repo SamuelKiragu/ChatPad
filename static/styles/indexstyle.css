@@ -1,0 +1,71 @@
+html {
+  height: 100%; }
+  html body {
+    background-color: #f2f2f2;
+    height: 100%;
+    margin: 0; }
+    html body #nav {
+      box-shadow: 1px 1px 5px grey;
+      height: 100%;
+      position: fixed;
+      width: 20%; }
+      html body #nav h1 {
+        border: 2px dashed #00b300;
+        box-sizing: border-box;
+        margin: 20px;
+        padding: 5px;
+        width: 60%; }
+    html body #body {
+      background-color: #bcff6b;
+      float: right;
+      height: 100%;
+      width: 100%; }
+      html body #body #display-container {
+        animation-name: slide;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        background: linear-gradient(to right, #009400, #00b300, #00eb00);
+        border-radius: 5px;
+        box-shadow: 0px 0px 3px grey;
+        height: auto;
+        margin: 10px 10% 0 20%;
+        position: relative;
+        top: 0px;
+        width: 60%; }
+        html body #body #display-container form {
+          background-color: white;
+          border-radius: 5px;
+          padding: 50px;
+          width: 100%; }
+          html body #body #display-container form label {
+            display: block;
+            font-size: 25px;
+            margin: 15px; }
+          html body #body #display-container form input[type=text] {
+            background-color: none;
+            border: none;
+            box-shadow: 0px 0px 3px grey;
+            display: block;
+            height: 40px;
+            margin: 15px;
+            width: 80%; }
+          html body #body #display-container form input[type=submit] {
+            border: 1px solid #00b300;
+            border-radius: 30px;
+            background: white;
+            color: #00b300;
+            height: 40px;
+            margin: 15px;
+            padding: 5px;
+            width: 120px; }
+          html body #body #display-container form input[type=submit]:hover {
+            background-color: #00b300;
+            color: white; }
+
+@keyframes slide {
+  from {
+    top: 0px; }
+  to {
+    top: 120px; } }
+
+/*# sourceMappingURL=indexstyle.css.map */
