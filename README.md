@@ -1,9 +1,19 @@
-# Project 2
+# ChatPad
+----
 
 Web Programming with Python and JavaScript
 This is a basic chatting web app that I have made using Flask( a micro framework) and JavaScript
-When one opens the website, they are prompted with a display page. Where they enter a unique name to be used. They are then directed to the home page
 
-The homepage loads the last channel before the browser was closed and the messages it had if there are any.
-One has an option to create a channel which should be unique otherwise a message is displayed to tell the user that the name has been taken. The user can then join a specified channel and then send messages to other people
-there is a maximum of the number of messages the server can hold for a particular channel
+The first page users get directed to prompts them to enter their username. The name, by nature is unique and is to be used to identify the participant in the group chats they participate in. 
+
+Once the user selects a name by the click of a button, they are redirected to the homepage.The homepage contains the last channel before the browser was closed and the messages that the channel had(if there are any).
+
+### Features:
+---
+1. Creating a channel with a unique name. Users will be informed if they try to create a channel using a name that is already taken.
+2. Join an already existing channel.
+
+**P.S:**
+----
+> 1. There is limit set for the messages that the server can hold for a particular channel.   
+> 2. I've created a walkthrough showing the web application at work and I've made it public on [Youtube](https://youtu.be/_IkeP64QXHc)
